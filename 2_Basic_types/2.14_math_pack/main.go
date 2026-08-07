@@ -32,9 +32,9 @@ func main() {
 	fmt.Println(math.Ceil(3.2))  // 4 - всегда в большую сторону
 
 	fmt.Println(math.Trunc(-3.8)) //-3 - отбрасывается дробная часть
-	fmt.Println(math.Trunc(-3.2)) //-3 - всегда в большую сторону
-	fmt.Println(math.Trunc(3.8))  // 3 - всегда в большую сторону
-	fmt.Println(math.Trunc(3.2))  // 3 - всегда в большую сторону
+	fmt.Println(math.Trunc(-3.2)) //-3 - отбрасывается дробная часть
+	fmt.Println(math.Trunc(3.8))  // 3 - отбрасывается дробная часть
+	fmt.Println(math.Trunc(3.2))  // 3 - отбрасывается дробная часть
 
 	// Округление с точностью
 
@@ -43,3 +43,9 @@ func main() {
 	rounded := math.Round(num * 100)
 	fmt.Println(rounded / 100)
 }
+
+// решение задания:
+// fmt.Println("Исходное число:",strconv.FormatFloat(random, 'f', 1, 64))
+// fmt.Println("Исходное число, увеличенное на 10%:",strconv.FormatFloat(random * 1.1, 'f', 5, 64))
+// fmt.Println("Исходное число является четным:",math.Mod(random, 2) == 0)
+// fmt.Println("Предпоследняя цифра целой части исходного числа:",int(random*10)/100)
